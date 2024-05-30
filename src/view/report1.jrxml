@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a0771a7b-140d-4f4a-8241-4de5d3640757">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from employee inner join department on employee.d_no=department.dep_no inner join title on employee.title=title.title_name]]>
+	</queryString>
+	<field name="emp_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="emp_basic" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="d_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="title" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="etf" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="epf" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="net_salary" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dep_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dep_allowance" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="title_allow" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="61" height="20" uuid="c1c720cb-ff00-45c1-9032-c42e5aefb095"/>
+				<text><![CDATA[Emp No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="2" width="75" height="20" uuid="e520452d-4bb8-4a68-86f7-f9347b0d27da"/>
+				<text><![CDATA[Emp Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="0" width="41" height="20" uuid="1ff60b53-d02a-4953-babf-0d4378d61dc4"/>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="2" width="71" height="20" uuid="65d391d0-61d9-4467-a8b1-5c094fa0c0b0"/>
+				<text><![CDATA[Dep Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="2" width="77" height="20" uuid="a8949be1-874c-40a3-b0d7-e0db14ae7ef1"/>
+				<text><![CDATA[Emp Basic Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="2" width="38" height="20" uuid="9bfe0e52-6ad9-4947-8dc9-7becaf9515ee"/>
+				<text><![CDATA[ETF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="2" width="42" height="20" uuid="b67870e8-b26e-4a84-a163-a9cc1e46e1eb"/>
+				<text><![CDATA[EPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="2" width="71" height="20" uuid="c93361dd-511e-45c8-9201-b3c60bae8ee9"/>
+				<text><![CDATA[Net Salary]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="13" width="61" height="20" uuid="a8a73740-6e9a-441e-93ae-6a6214f0fe1e"/>
+				<textFieldExpression><![CDATA[$F{emp_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="76" y="13" width="75" height="20" uuid="bee9d453-cb6d-4236-a310-c52edb52bc84"/>
+				<textFieldExpression><![CDATA[$F{emp_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="13" width="41" height="20" uuid="a30505cb-204c-4486-9c65-7323d7e13924"/>
+				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="13" width="71" height="20" uuid="08c8937b-c89f-418d-97e2-b697a1f82f10"/>
+				<textFieldExpression><![CDATA[$F{dep_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="298" y="13" width="77" height="20" uuid="539bb2ea-b25d-4c48-a0d8-ca9b5bbcb681"/>
+				<textFieldExpression><![CDATA[$F{emp_basic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="386" y="13" width="38" height="20" uuid="778422b4-c954-4c2d-8e6a-4edc761d8552"/>
+				<textFieldExpression><![CDATA[$F{etf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="13" width="42" height="20" uuid="b3afe545-dd29-4c3e-b3fe-95db31751ef7"/>
+				<textFieldExpression><![CDATA[$F{epf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="13" width="71" height="20" uuid="c7120c1b-f710-476f-aa5a-33a5cd3cf7d0"/>
+				<textFieldExpression><![CDATA[$F{net_salary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
