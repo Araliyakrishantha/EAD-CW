@@ -7,6 +7,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.ArrayList;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -289,6 +290,14 @@ public class VEmployee extends javax.swing.JFrame {
         txt_ETF.setText("");
         txt_EPF.setText("");
         txt_NetSal.setText("");
+        
+        ArrayList<Double> numbers = new ArrayList<Double>();
+        numbers.add(basic);
+        numbers.add(etf);
+        numbers.add(epf);
+        numbers.add(net_sal);
+        numbers.forEach( (n) -> { System.out.println(n); } );
+        
         }catch(NumberFormatException e){
             System.err.println("Format Ecception " + e.getMessage());
         }catch(NullPointerException ex){
