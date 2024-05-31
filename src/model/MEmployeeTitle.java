@@ -8,7 +8,7 @@ public class MEmployeeTitle {
     public <A>ResultSet msearchByTitle(A title){
         try{
             Statement st = MDBConnection.getConnection().createStatement();
-            rs = st.executeQuery("select * from title where title_name = '"+title+"'");
+            rs = st.executeQuery("select * from title where title_name = '"+title+"'"); //sql query
             
         }catch(SQLException e){
             System.err.println(e.getMessage());

@@ -13,7 +13,7 @@ public class MEmployeeUpdate {
             if(row_count>0){
                 JOptionPane.showMessageDialog(null, "Employee is updated");
             }else{
-                JOptionPane.showMessageDialog(null, "Can't update. EmpNo doesn't exist in database, check again!","Error",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Can't update. EmpNo doesn't exist in database, check again!","Error",JOptionPane.ERROR_MESSAGE); //checking whether the empno is available or not
             }
         }catch(SQLException e){
             System.out.println(e.getMessage());
