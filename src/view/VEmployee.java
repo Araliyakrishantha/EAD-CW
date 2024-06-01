@@ -437,13 +437,13 @@ public class VEmployee extends javax.swing.JFrame {
                     txt_Tel.setText(rst.getString(4));
                     String gen="",dno="",title="";
                     gen = rst.getString(5);
-                    if(gen.equals("M")){
+                    if(gen.equals("M")){ //checking whether rad_Male or rad_Female is slected
                         rad_Male.setSelected(true);
                     }else if(gen.equals("F")){
                         rad_Female.setSelected(true);
                     }
                     txt_BasicSal.setText(rst.getString(6));
-                    dno = rst.getString(7);
+                    dno = rst.getString(7); //setting selected item of dno according to database value
                     if(dno.equals("001")){
                         cmb_DepNo.setSelectedItem("001");
                     }else if(dno.equals("002")){
@@ -453,7 +453,7 @@ public class VEmployee extends javax.swing.JFrame {
                     }else if(dno.equals("004")){
                         cmb_DepNo.setSelectedItem("004");
                     }
-                    title = rst.getString(8);
+                    title = rst.getString(8); //setting selected index of title according to corresponding related data value
                     if(title.equals("Manager")){
                         cmb_Title.setSelectedIndex(0);
                     }else if(title.equals("Staff")){
